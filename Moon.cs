@@ -23,8 +23,8 @@ namespace StorybrewScripts
 
         public override void Generate()
         {
-		    var layer = GetLayer("Moon");
-
+		var layer = GetLayer("Moon");
+  
             ChorusEffects(86228, 99943, layer);
             BeatJumper(86228, 99943, layer);
 
@@ -46,8 +46,6 @@ namespace StorybrewScripts
                 j += beatration * 4;
                 randomRot *= -1;
             }
-            
-
             mainMoon.Fade(startTime - beatration * 2, startTime, 0, 1);
             mainMoon.Fade(endTime, 0);
 
@@ -59,6 +57,7 @@ namespace StorybrewScripts
 
             mainMoon.Rotate(startTime - beatration * 2, startTime, DegToRad(-15), DegToRad(0));
         }
+	
         public void BeatJumper(int startTime, int endTime, StoryboardLayer layer)
         {   
             var moonOut = layer.CreateSprite("sb/MOON/moonOut.png", OsbOrigin.Centre, new Vector2(320, 240));
