@@ -101,9 +101,6 @@ namespace StorybrewScripts
 
                     for(double k = startTime; k < endTime; k += moveMult)
                     {
-                        var fallTime = Random(1500, 1700);
-                        var randX = Random(0, 640);
-
                         var newX = radius * Math.Cos(DegToRad(trueAngle - angle)) * multiplier + 320;
                         var newY = radius * Math.Sin(DegToRad(trueAngle - angle)) + 240;
 
